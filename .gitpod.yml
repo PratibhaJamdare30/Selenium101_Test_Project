@@ -1,0 +1,16 @@
+image: mcr.microsoft.com/dotnet/sdk:8.0
+
+tasks:
+  - name: Setup Environment
+    init: |
+      export LT_USERNAME=pratibha_jamdare
+      export LT_ACCESS_KEY=LT_j5dCbPFOqZDQtNP5f3Pmi3Um3czmCgI0YZ8SkXhRJHsGJ6q
+      export LT_TUNNEL=false
+      export LT_BUILD=LambdatestBuild
+    command: |
+      dotnet restore
+      dotnet test
+
+vscode:
+  extensions:
+    - ms-dotnettools.csharp
